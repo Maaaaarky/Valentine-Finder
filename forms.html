@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="style.css" />
+            <title>Valentine Finder</title>
+        </head>
+        <header>
+            <div class="header">
+                <img src="IMAGE/LOGO.png" alt="HeartLOGO" class="LOGO"/>
+                <h1 class="title">Valentine Finder</h1>
+                <div class="nav">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="aboutus.html">About Us</a>
+                        <a href="privacy.html">Privacy</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <body>
+            <div class="forms">
+                <form name="forms" method="post"
+                action="https://script.google.com/macros/s/AKfycbx0mwP34Y22NVdeVWd9YAtlHhUjGsy0yMz6Ngm0CwFqO7fx67w-NPNqBJ_ZxkUj31Un/exec" 
+                onsubmit="return validateForm()">
+                </br>
+                <h1>(========-_-_-_-Registration Form-_-_-_-========)</h1>
+                </br></br></br>
+                <label for="first-name">First Name:</label>
+                <input type="text" placeholder="Enter First Name" name="First-name" id="first-name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" placeholder="Enter Last Name" name="Last-name" id="last-name" required>
+            </br>
+                <label for="date-of-birth">Date of Birth:</label>
+                <input type="date" name="date-of-birth" id="date-of-birth">
+
+                <label for="Age">Age: </label>
+                <input type="number" name="Age" placeholder="Age must be 18 to 64" id="Age" min="18" max="64" required>
+            </br>
+                <label for="email">Email Address:</label>
+                <input type="email" name="email" placeholder=". . . @gmail.com" id="email" required>
+
+                <label for="address">City Address:</label>
+				<input type="text" name="address" id="address" placeholder="Enter City Address"  required>
+            </br>
+            <div class="radio-container">
+                <label for="civil-status">Civil Status:</label><br>
+                <input type="radio" id="single" name="civil-status" value="Single">
+                <label for="single">Single</label><br>
+                <input type="radio" id="widowed" name="civil-status" value="Widowed">
+                <label for="widowed">Widowed</label><br>
+                <input type="radio" id="divorced" name="civil-status" value="Divorced">
+                <label for="divorced">Divorced</label><br>
+            </div>
+                <h2>Sexual Orientation</h2>
+            </br>
+                <label for="gender">Gender:</label>
+                    
+                <label for="partner-gender">Date's Gender:</label>
+            </br>
+                  <select name="gender" id="gender" onchange="showOtherInput()" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="CisMale">Male</option>
+                        <option value="CisFemale">Female</option>
+                        <option aria-placeholder="Other">Other</option>
+                    </select>
+                    <select name="partner-gender" id="partner-gender" onchange="showOtherInput1()" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="CisMale">Male</option>
+                        <option value="CisFemale">Female</option>
+                        <option aria-placeholder="Other">Other</option>
+                    </select>
+            </br>
+                <input type="text" name="gender" id="other-gender" placeholder="Please Specify Gender" required disabled>
+                <input type="text" name="partner-gender" id="other-partner-gender" placeholder="Please Specify Partner's Gender" required disabled>
+            
+            <div class="checkbox-container">
+                <label for="partner's-civil-status">Date's Civil Status:</label><br>
+                <input type="checkbox" id="single" name="partner's-civil-status" value="Single">
+                <label for="single">Single</label><br>
+                <input type="checkbox" id="widowed" name="partner's-civil-status" value="Widowed">
+                <label for="widowed">Widowed</label><br>
+                <input type="checkbox" id="divorced" name="partner's-civil-status" value="Divorced">
+                <label for="divorced">Divorced</label><br>
+            </div>
+            
+            <label for="Likes">Likes:</label>
+            <textarea placeholder="Please describe yourself such hobbies and date preferences" 
+                name="Likes" id="Likes"  maxlength="300" required></textarea>
+            <br>
+            <label for="Dislikes">Dislikes:</label>
+            <textarea placeholder="Please enter things that you hate such as pet peeves" 
+                name="Dislikes" id="Dislikes"  maxlength="300" required></textarea>
+        </br>
+            <button type="submit">Submit</button>
+            </div>
+            <script src="script.js"></script>
+        </body>
+    </html>
