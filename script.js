@@ -11,17 +11,18 @@ function validateForm() {
         return false;
     }
 
-    var civilStatusCheckboxes = document.querySelectorAll('input[name="partner\'s-civil-status"]');
-    isChecked = false;
-    civilStatusCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            isChecked = true;
-        }
-    });
-    if (!isChecked) {
+    var partnerCivilStatusCheckboxes = document.querySelectorAll('input[name="partner\'s-civil-status"]:checked');
+    if (partnerCivilStatusCheckboxes.length === 0) {
         alert('Please select at least one partner\'s civil status.');
         return false;
     }
+
+    var partnerCivilStatusValues = [];
+    partnerCivilStatusCheckboxes.forEach(function(checkbox) {
+        partnerCivilStatusValues.push(checkbox.value);
+    });
+
+    document.getElementById('partner-civil-status').value = partnerCivilStatusValues.join(',');
 
     return true;
 }
